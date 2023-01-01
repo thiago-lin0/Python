@@ -1,2 +1,5 @@
-# Python
-Estudos de python 
+# Estudos de Python
+
+### Sumário
+1. Objetivos
+
