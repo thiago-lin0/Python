@@ -3,8 +3,8 @@
 ********
 ### Sumário
 1. [Objetivos](#objetivos)
-[Seção  1](#Seção1)
-2. [comentários no python](#coment)
+2. [Seção  1](#Seção1)
+2.1  [comentários no python](#coment)
 *******
 
 <div id='objetivos'>
@@ -17,7 +17,7 @@ Esse repositorio tem o intuito de estudos e deixar documentada para outras pesso
 ## Seção 1
   
 <div id='coment'>
-## Comentários no Python
+##  Comentários no Python
 No python existem o documentário de uma linha usando a #, também esxite a docstring porém não é um comentário, mas caso você queira fazer um comentário de varias linhas, podemos usar ela, ''' seu comentário ''' ou """ seu comentario aqui """
 
 EXEMPLOS
