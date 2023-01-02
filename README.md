@@ -4,6 +4,7 @@
 ### Sumário
 1. [Objetivos](#objetivos)
 2. [comentários no python](#coment)
+3. [print e argumentos nomeados e não nomeados](#print)
 *******
 
 <div id='objetivos'>
@@ -30,3 +31,23 @@ uma
 docstring
 '''
 ~~~~
+
+*******
+  
+<div id='print'>
+ 
+## Print e argumentos nomeados e não nomeados
+  print é uma função que recebe argumentos não nomeadoe e argumentos nomeados, argumentos nomeados é a passagem de valores fazendo associação com o nome do parâmetro e o valor que está sendo enviado já os não nomeado ou posicionais são utilizado para a passagem de valores onde cada valor estara na ordem conforme implementado na função.
+  
+EXEMPLO
+ ~~~python
+  #argumentos não nomeados
+  print(12,34)
+  
+  '''
+  quando vemos a saida dos argumentos ele já vem com espaço
+  podemos modificar esse espaço com argumento nomeados sep=""
+'''
+  print(56,78, sep="-")
+ ~~~~
+ 
