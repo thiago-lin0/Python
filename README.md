@@ -58,4 +58,20 @@ EXEMPLO
  ## Tipos de dados
  Nessa parte vamos falar sobre os diversos Tipos de Variáveis do Python. Independente se você vem de outra linguagem ou se está começando agora no Python, saber quais são e como utilizá-las é muito importante para desenvolvermos um código em Python. Vamos falar de alguns tipos nessa seção.
  
- 
+ ## Tipo String(str)
+ É um conjunto de caracteres dispostos numa determinada ordem, geralmente utilizada para representar palavras, frases ou textos.
+  
+ EXEMPLOS:
+
+  ~~~~python
+nome = 'Thiago'
+profissao = 'Engenheiro de Software'
+
+print(type(profissao), profissao)
+print(type(nome), nome)
+   
+SAIDA
+<class 'str'> Engenheiro de Software
+<class 'str'> Thiago
+
+  ~~~~
