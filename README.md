@@ -5,6 +5,7 @@
 1. [Objetivos](#objetivos)
 2. [comentários no python](#coment)
 3. [print e argumentos nomeados e não nomeados](#print)
+4. [TIpos de dados](#types)
 *******
 
 <div id='objetivos'>
@@ -50,4 +51,11 @@ EXEMPLO
 '''
   print(56,78, sep="-")
  ~~~~
+ *******
+ 
+ <div id='types'>
+ 
+ ## Tipos de dados
+ Nessa parte vamos falar sobre os diversos Tipos de Variáveis do Python. Independente se você vem de outra linguagem ou se está começando agora no Python, saber quais são e como utilizá-las é muito importante para desenvolvermos um código em Python. Vamos falar de alguns tipos nessa seção.
+ 
  
