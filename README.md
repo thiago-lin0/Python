@@ -75,3 +75,45 @@ SAIDA
 <class 'str'> Thiago
 
   ~~~~
+
+## Tipo Inteiro (int)
+O tipo inteiro é um tipo composto por caracteres numéricos (algarismos) inteiros.É um tipo usado para um número que pode ser escrito sem um componente decimal, podendo ter ou não sinal, isto é: ser positivo ou negativo.
+
+Por exemplo, 21, 4, 0, e −2048 são números inteiros, enquanto 9.75, 1/2, 1.5 não são.
+
+EXEMPLO
+~~~~python
+idade = 27
+ano = 2023
+
+print(type(idade))
+print(type(ano))
+
+SAIDA
+
+<class 'int'> 27
+<class 'int'> 2023
+~~~~
+
+## Ponto Flutuante ou Decimal (float)
+É um tipo composto por caracteres numéricos (algarismo) decimais.O famoso ponto flutuante é um tipo usado para números racionais (números que podem ser representados por uma fração) informalmente conhecido como “número quebrado”.
+
+>*OBS: Notem que o separador é o ponto e não a virgula
+
+EXEMPLO
+
+~~~~python
+altura = 1.80
+peso = 73.55
+
+print(type(peso))
+print(type(altura))
+
+
+SAIDA
+
+<class 'int'> 1.80
+<class 'int'> 73.55
+
+
+~~~~
