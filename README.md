@@ -176,7 +176,8 @@ O Python também possui uma função integrada para converter floats em inteiros
      SAIDA
         390
 ~~~~
-    >* Ao converter os floats em inteiros com a função int(), o Python corta a casa decimal e os números do float que restam são usados para criar um inteiro. Embora talvez você queira arredondar 390,8 para 391, o Python não fará isso através da função int().
+
+>* Ao converter os floats em inteiros com a função int(), o Python corta a casa decimal e os números do float que restam são usados para criar um inteiro. Embora talvez você queira arredondar 390,8 para 391, o Python não fará isso através da função int().
      
 ## Convertendo com as strings
      
