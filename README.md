@@ -156,7 +156,9 @@ Em Python, existem dois tipos de dados numéricos: inteiros e números de ponto 
 SAIDA
      57.0
   ~~~~
-     >* Nada me impede de usar em uma variavel 
+
+>* Nada me impede de usar em uma variavel
+     
      
      ~~~~python
      t = 57
