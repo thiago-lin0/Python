@@ -146,7 +146,7 @@ print(type(feriado))
      
    ## Typecasting ou conversão de tipos
      
-     Em Python, existem dois tipos de dados numéricos: inteiros e números de ponto flutuante (float). Às vezes, ao trabalhar no código de outra pessoa, será necessário converter um inteiro para um float ou vice-versa. Em outros casos, você pode estar usando um inteiro quando o que realmente precisa é de um float. O Python possui métodos integrados para permitir a conversão de inteiros em floats e floats em inteiros.
+Em Python, existem dois tipos de dados numéricos: inteiros e números de ponto flutuante (float). Às vezes, ao trabalhar no código de outra pessoa, será necessário converter um inteiro para um float ou vice-versa. Em outros casos, você pode estar usando um inteiro quando o que realmente precisa é de um float. O Python possui métodos integrados para permitir a conversão de inteiros em floats e floats em inteiros.
      
  O método float() do Python irá converter inteiros em floats. Para usar essa função, adicione um inteiro dentro dos parênteses:
      
@@ -163,5 +163,37 @@ SAIDA
      print(float(f))
      
      SAIDA
-      57.0
+        57.0
      ~~~~
+
+Convertendo floats em inteiros
+     
+O Python também possui uma função integrada para converter floats em inteiros: int(). A função int() funciona de maneira semelhante à função float(): é possível adicionar um número de ponto flutuante dentro dos parênteses para convertê-lo em um inteiro:
+     
+~~~~python
+     print(int(390.8))
+     
+     SAIDA
+        390
+~~~~
+    >* Ao converter os floats em inteiros com a função int(), o Python corta a casa decimal e os números do float que restam são usados para criar um inteiro. Embora talvez você queira arredondar 390,8 para 391, o Python não fará isso através da função int().
+     
+## Convertendo com as strings
+     
+Uma string é uma sequência de um ou mais caracteres (letras, números ou símbolos). As strings são uma forma comum de dados em programas de computador. Muitas vezes, pode ser necessário converter strings em números e números em strings, especialmente quando estivermos incluindo dados gerados pelo usuário.
+     
+Podemos converter números em strings usando o método str(). Vamos passar um número ou uma variável dentro dos parênteses do método e então esse valor numérico será convertido em um valor de string.
+
+Primeiro, vamos ver como converter inteiros. Para converter o inteiro 12 em um valor de string, passe o número 12 para o método str():
+     
+ ~~~~python
+  print(str(12))
+     
+    SAIDA
+        '12'
+~~~~
+     
+Convertendo strings em números
+
+As strings podem ser convertidas em números usando os métodos int() e float(). Se sua string não tiver casas decimais, você provavelmente vai querer convertê-la em um número inteiro, usando o método int().
+
