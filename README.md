@@ -5,7 +5,8 @@
 1. [Objetivos](#objetivos)
 2. [comentários no python](#coment)
 3. [print e argumentos nomeados e não nomeados](#print)
-4. [TIpos de dados](#types)
+4. [Tipos de dados](#types)
+5. [Typecasting ou convesão de tipos](#typecasting)
 *******
 
 <div id='objetivos'>
@@ -138,3 +139,29 @@ print(type(feriado))
   ~~~~
   
   >* Esxistem outros tipos de dados no python porém vamos aprender um pouqinho mais para frente
+
+ *******
+  
+   <div id='typescasting'>
+     
+   ## Typecasting ou conversão de tipos
+     
+     Em Python, existem dois tipos de dados numéricos: inteiros e números de ponto flutuante (float). Às vezes, ao trabalhar no código de outra pessoa, será necessário converter um inteiro para um float ou vice-versa. Em outros casos, você pode estar usando um inteiro quando o que realmente precisa é de um float. O Python possui métodos integrados para permitir a conversão de inteiros em floats e floats em inteiros.
+     
+ O método float() do Python irá converter inteiros em floats. Para usar essa função, adicione um inteiro dentro dos parênteses:
+     
+  ~~~~python
+     float(57)
+     
+SAIDA
+     57.0
+  ~~~~
+     >* Nada me impede de usar em uma variavel 
+     
+     ~~~~python
+     t = 57
+     print(float(f))
+     
+     SAIDA
+      57.0
+     ~~~~
