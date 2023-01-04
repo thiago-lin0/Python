@@ -117,3 +117,24 @@ SAIDA
 
 
 ~~~~
+  
+## Boolean (bool)
+  
+Tipo de dado lógico que pode assumir apenas dois valores: falso ou verdadeiro (False ou True em Python).Na lógica computacional, podem ser considerados como 0 ou 1.
+
+Exemplos:
+  
+  ~~~~python
+fim_de_semana = True
+feriado = False
+
+print(type(fim_de_semana))
+print(type(feriado))
+  
+ SAIDA
+  
+<class 'bool'> true
+<class 'boll'> false
+  ~~~~
+  
+  >* Esxistem outros tipos de dados no python porém vamos aprender um pouqinho mais para frente
