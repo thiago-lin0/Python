@@ -7,6 +7,7 @@
 3. [print e argumentos nomeados e não nomeados](#print)
 4. [Tipos de dados](#types)
 5. [Typecasting ou convesão de tipos](#typecasting)
+6. [Exercicios](#exercicio)
 *******
 
 <div id='objetivos'>
@@ -199,4 +200,10 @@ Primeiro, vamos ver como converter inteiros. Para converter o inteiro 12 em um v
 Convertendo strings em números
 
 As strings podem ser convertidas em números usando os métodos int() e float(). Se sua string não tiver casas decimais, você provavelmente vai querer convertê-la em um número inteiro, usando o método int().
+
+<div id='exercicio'>
+
+** Exercicios
+>* Apartir de agora vai ter exercicios tanto teoricos quanto práticos para podermos nos analisar se estamos aprendendo. então você já está apto a fazer os 3 primeiros teste
+
 
