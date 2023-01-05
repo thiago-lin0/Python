@@ -2,25 +2,32 @@
 
 ********
 ### Sumário
-1. [Objetivos](#objetivos)
-2. [comentários no python](#coment)
-3. [print e argumentos nomeados e não nomeados](#print)
-4. [Tipos de dados](#types)
-5. [Typecasting ou convesão de tipos](#typecasting)
-6. [Exercicios](#exercicio)
+  [Estudos de Python](#estudos-de-python)
+  [Sumário](#sumário)
+  1.[Objetivos](#objetivos)
+  2.[Comentários no Python](#comentários-no-python)
+  3.[Print e argumentos nomeados e não nomeados](#print-e-argumentos-nomeados-e-não-nomeados)
+  4.[Tipos de dados](#tipos-de-dados)
+  5.[Typecasting ou conversão de tipos](#typecasting)
+  6.[Exercicios](#exercicio)
+  7.[Variáveis](#var)
+  8.[Input e interação com o usuário](#input)
+  9.[Exercicios](#exerVar)
+  10.[Operadores aritimédicos](#oAritimedicos)
+  11.[Exercicio](#exercicioOpe)
 *******
 
 <div id='objetivos'>
 
-## Objetivos
+** Objetivos
   
 Esse repositorio tem o intuito de estudos e deixar documentada para outras pessoas que queiram aprender python (e para mim caso me esqueça), esse Documento vai ter explicação e exercicios para podermo práticar juntos.
 
 ******
   
-<div id='coment'>
+<div id='comentários-no-python'>
   
-## Comentários no Python
+** Comentários no Python
   
 No python existem o documentário de uma linha usando a #, também esxite a docstring porém não é um comentário, mas caso você queira fazer um comentário de varias linhas, podemos usar ela, ''' seu comentário ''' ou """ seu comentario aqui """
 
@@ -37,9 +44,9 @@ docstring
 
 *******
   
-<div id='print'>
+<div id='print-e-argumentos-nomeados-e-não-nomeados'>
  
-## Print e argumentos nomeados e não nomeados
+** Print e argumentos nomeados e não nomeados
   print é uma função que recebe argumentos não nomeadoe e argumentos nomeados, argumentos nomeados é a passagem de valores fazendo associação com o nome do parâmetro e o valor que está sendo enviado já os não nomeado ou posicionais são utilizado para a passagem de valores onde cada valor estara na ordem conforme implementado na função.
   
 EXEMPLO
@@ -55,12 +62,14 @@ EXEMPLO
  ~~~~
  *******
  
- <div id='types'>
+ <div id='tipos-de-dados'>
  
- ## Tipos de dados
+ ** Tipos de dados
+
  Nessa parte vamos falar sobre os diversos Tipos de Variáveis do Python. Independente se você vem de outra linguagem ou se está começando agora no Python, saber quais são e como utilizá-las é muito importante para desenvolvermos um código em Python. Vamos falar de alguns tipos nessa seção.
  
- ## Tipo String(str)
+ *** Tipo String (str)
+
  É um conjunto de caracteres dispostos numa determinada ordem, geralmente utilizada para representar palavras, frases ou textos.
   
  EXEMPLOS:
@@ -78,7 +87,8 @@ SAIDA
 
   ~~~~
 
-## Tipo Inteiro (int)
+*** Tipo inteito (int)
+
 O tipo inteiro é um tipo composto por caracteres numéricos (algarismos) inteiros.É um tipo usado para um número que pode ser escrito sem um componente decimal, podendo ter ou não sinal, isto é: ser positivo ou negativo.
 
 Por exemplo, 21, 4, 0, e −2048 são números inteiros, enquanto 9.75, 1/2, 1.5 não são.
@@ -97,7 +107,8 @@ SAIDA
 <class 'int'> 2023
 ~~~~
 
-## Ponto Flutuante ou Decimal (float)
+*** Tipo float
+
 É um tipo composto por caracteres numéricos (algarismo) decimais.O famoso ponto flutuante é um tipo usado para números racionais (números que podem ser representados por uma fração) informalmente conhecido como “número quebrado”.
 
 >*OBS: Notem que o separador é o ponto e não a virgula
@@ -114,14 +125,14 @@ print(type(altura))
 
 SAIDA
 
-<class 'int'> 1.80
-<class 'int'> 73.55
+<class 'flaot'> 1.80
+<class 'flaot'> 73.55
 
 
 ~~~~
   
-## Boolean (bool)
-  
+*** tipo boolean (bool)
+
 Tipo de dado lógico que pode assumir apenas dois valores: falso ou verdadeiro (False ou True em Python).Na lógica computacional, podem ser considerados como 0 ou 1.
 
 Exemplos:
@@ -143,10 +154,10 @@ print(type(feriado))
 
  *******
   
-   <div id='typescasting'>
-     
-   ## Typecasting ou conversão de tipos
-     
+ <div id='typescasting'>
+
+** Conversão de tipos ou Typecasting
+
 Em Python, existem dois tipos de dados numéricos: inteiros e números de ponto flutuante (float). Às vezes, ao trabalhar no código de outra pessoa, será necessário converter um inteiro para um float ou vice-versa. Em outros casos, você pode estar usando um inteiro quando o que realmente precisa é de um float. O Python possui métodos integrados para permitir a conversão de inteiros em floats e floats em inteiros.
      
  O método float() do Python irá converter inteiros em floats. Para usar essa função, adicione um inteiro dentro dos parênteses:
@@ -169,7 +180,7 @@ SAIDA
         57.0
      ~~~~
 
-Convertendo floats em inteiros
+*** Convertendo floats em inteiros
      
 O Python também possui uma função integrada para converter floats em inteiros: int(). A função int() funciona de maneira semelhante à função float(): é possível adicionar um número de ponto flutuante dentro dos parênteses para convertê-lo em um inteiro:
      
@@ -181,9 +192,10 @@ O Python também possui uma função integrada para converter floats em inteiros
 ~~~~
 
 >* Ao converter os floats em inteiros com a função int(), o Python corta a casa decimal e os números do float que restam são usados para criar um inteiro. Embora talvez você queira arredondar 390,8 para 391, o Python não fará isso através da função int().
+    
      
-## Convertendo com as strings
-     
+*** Convertendo String
+
 Uma string é uma sequência de um ou mais caracteres (letras, números ou símbolos). As strings são uma forma comum de dados em programas de computador. Muitas vezes, pode ser necessário converter strings em números e números em strings, especialmente quando estivermos incluindo dados gerados pelo usuário.
      
 Podemos converter números em strings usando o método str(). Vamos passar um número ou uma variável dentro dos parênteses do método e então esse valor numérico será convertido em um valor de string.
@@ -197,13 +209,135 @@ Primeiro, vamos ver como converter inteiros. Para converter o inteiro 12 em um v
         '12'
 ~~~~
      
-Convertendo strings em números
+*** Convertendo strings em números
 
 As strings podem ser convertidas em números usando os métodos int() e float(). Se sua string não tiver casas decimais, você provavelmente vai querer convertê-la em um número inteiro, usando o método int().
 
 <div id='exercicio'>
 
 ** Exercicios
+
 >* Apartir de agora vai ter exercicios tanto teoricos quanto práticos para podermos nos analisar se estamos aprendendo. então você já está apto a fazer os 3 primeiros teste
 
+<div id='var'>
 
+** Variáveis em Python
+
+Variaveis são usadas para salvar algo na memoria do computador
+PEP8: inicie variaveis com letras minusculas pode usar numeros e underline_
+O sinal de = é o operador de atribuição. ele é usado para 
+atribuir um valor a um nome(variavel)
+uso: nome_variavel = expressao
+
+~~~~python
+nome = 'Thiago'
+idade = 28
+maior_de_idade = idade >= 18 
+print('Nome:', nome, 'Idade:', idade)
+print('É maior de idade ?' , maior_de_idade)
+~~~~
+
+>* f strings
+
+~~~~python
+name = 'Thiago Lino'
+height = 1.80
+weight = 130
+imc = weight / (height ** 2)
+
+print(f'{name} tem {height:.2f} de altura,')
+print(f'pesa {weight} quilos e seu IMC é')
+print(f'{imc:.2f}') 
+~~~~
+
+>* :.2f, serve para arrendondar o numero com 2 casas deciamis
+
+<div id='input'>
+
+** Input e interção com o usuário
+
+Esse é um artifício muito comum em programação, quando precisamos que o usuário passe ao programa algum tipo de dado. Em Python, fazemos isso utilizando a função input(), que é literalmente ‘entrada’ em inglês.
+A função input() recebe como parâmetro uma string que será mostrada como auxílio ao usuário, geralmente o informando que tipo de dado o programa está aguardando receber.
+
+>* obs: o input em sim ele não faz nada é somente de leitura, porém podemos guardar ele dentro de uma váriavel
+
+EXEMPLO
+~~~~python
+valor1 = int(input('digite um numero: '))
+valor2 = int(input('digite outro numero: '))
+
+print(f'A soma dos Valores é: {valor1 + valor2}')
+~~~~
+
+>* O input nos guardar uma string então caso peça ao usuario um tipo de dados númericos, você precisa converter-los
+
+<div id='exerVar'>
+
+** Exercicios Práticos
+
+Chegou a hora de fazermos o nosso primeiro teste prático então vá la na pasta teste e faça o nosso teste04.py, caso você queira a resolução é só falar
+
+<div id='oAritimedicos'>
+
+** Operadore aritimédicos
+
+Esses operadores são utilizados para criarmos expressões matemáticas comuns, como soma, subtração, multiplicação e divisão.
+
+Veja quais estão disponíveis no Python:
+
+| Operador | Nome                      |
+| -------- | ------------------------- |
+| +        | Adição                    |
+| -        | Subtração                 |
+| *        | Multiplicação             |
+| /        | Divisão                   |
+| //       | Divisão inteira           |
+| %        | Resto da divisão (Módulo) |
+| **       | Exponenciação             |
+
+EXEMPLOS
+
+~~~~python
+quatro = 4
+dois = 2
+
+soma = quatro + dois
+print(soma)  # Resultado: 6
+
+subtracao = quatro - dois
+print(subtracao)  # Resultado: 2
+
+multiplicacao = quatro * dois
+print(multiplicacao)  # Resultado: 8
+
+divisao = quatro / dois
+print(divisao)  # Resultado: 2.0
+
+divisao_interna = quatro // dois
+print(divisao_interna)  # Resultado: 2
+
+modulo = quatro % dois
+print(modulo)  # Resultado: 0
+
+exponenciacao = quatro ** dois
+print(exponenciacao)  # Resultado: 16
+
+~~~~
+
+** Concatenação (+) e repetição (*) com operadores aritimédicos
+Também podemos unir ou concatenar letras com o sinal de (+), ou letras com números, já o operador (*) quando multiplicado com uma string ele irá repetir essa str quantas vezes o numero que você multiplicou
+
+*** Precedência entre Operadores
+
+A hierarquia vai de cima para baixo
+
+()  
+**    
+* /   
++ -   
+    
+Os operadores com a mesma precedência são avaliados da esquerda para a direita
+
+<div id='exercicioOpe'>
+
+Agora vá e teste seu conhecimento resolvendo o teste05.py
