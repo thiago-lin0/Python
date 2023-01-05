@@ -340,4 +340,220 @@ Os operadores com a mesma precedência são avaliados da esquerda para a direita
 
 <div id='exercicioOpe'>
 
+** Exercicios
+
 Agora vá e teste seu conhecimento resolvendo o teste05.py
+
+<div id='comparacao'>
+
+** Operadores de Comparação
+Como o nome já diz, esses Operadores são usados para comparar dois valores:
+
+| Operador | Nome                      |Função
+| -------- | ------------------------- |---------
+| ==       | igual a                   |verifica se um valor é igual ao outro
+| !=       | Diferente                 | verifica se um valor é diferente do outro
+| >        | Maior que                 | verifica se um valor é maior do que o outro
+| >=       | Maior ou igual            | verifica se um valor é maior ou igual ao outro
+| <        | Menor que                 | verifica se um valor é menor do que o outro
+| <=       | Menor ou igual            | verifica se um valor é igual ou maior do que o outro
+
+EXEMPLOS
+
+~~~~python
+var = 5
+
+if var == 5:
+    print('Os valores são iguais')
+
+if var != 7:
+    print('O valor não é igual a 7')
+
+if var > 2:
+    print('O valor da variável é maior de 2')
+
+if var >= 5:
+    print('O valor da variável é maior ou igual a 5')
+
+if var < 7:
+    print('O valor da variável é menor que 7')
+
+if var <= 5:
+    print('O valor da variável é menor ou igual a 5')
+
+SAIDA
+# Os valores são iguais
+# O valor não é igual a 5
+# O valor da variável é maior de 5
+# O valor da variável é maior ou igual a 5
+# O valor da variável é menor que 7
+# O valor da variável é menor ou igual a 5
+
+~~~~
+
+** Operadore de Atribuição
+Esse Operadores são utilizados no momento da atribuição de valores à variáveis e controlam como a atribuição será realizada.
+
+| Operador | Equivale                  |
+| -------- | ------------------------- |
+| =        | x = 1                     |
+| +=       | x = x + 1                 |
+| -=       | x = x - 1                 |
+| *=       | x = x * 1                 |
+| /=       | x = x / 1                 |
+| %=       | x = x % 1                 |
+
+EXEMPLO
+
+Operador +=:
+~~~~python
+numero = 5
+numero += 7
+print(numero)  # Resultado será 10
+~~~~
+
+*******
+
+Operador -=:
+~~~~python
+numero = 5
+numero -= 7
+print(numero)  # Resultado será 2
+~~~~
+
+********
+
+operador *=
+~~~~python
+numero = 5
+numero *= 2
+print(numero)  # Resultado será 10
+~~~~
+
+********
+
+operador /=
+~~~~python
+numero = 5
+numero /= 4
+print(numero)  # Resultado será 1.25
+~~~~
+
+********
+
+operador %=
+~~~~python
+numero = 5
+numero %= 2
+print(numero)  # Resultado será 1
+~~~~
+
+** Operdares Lógicos
+
+Esses Operadores nos possibilitam construir um tipo de teste muito útil e muito utilizado em qualquer programa Python: os testes lógicos.
+
+Python nos disponibiliza três tipos de Operadores Lógicos: o and, o or e o not.
+
+Vamos ver mais sobre eles agora!
+
+| Operador | Equivale                  |
+| -------- | ------------------------- |
+| and      | Retorna true se todas as afirmações forem true v + v = v, v + f = f                    |
+| or       | retorna true se uma das afirmações forem true v + f = v, v + v = v                |
+| not      | retorna falso se o resultado verdadeiro             |
+
+
+EXEMPLO
+
+~~~~python
+um1 = 7
+num2 = 4
+
+# Exemplo and
+if num1 > 3 and num2 < 8:
+    print("As Duas condições são verdadeiras")
+
+# Exemplo or
+if num1 > 4 or num2 <= 8:
+    print("Uma ou duas das condições são verdadeiras")
+
+# Exemplo not
+if not (num1 < 30 and num2 < 8):
+    print('Inverte o resultado da condição entre os parânteses')
+~~~~
+
+
+** Estrutura de Condição
+
+Agora que já está craque com os Operadores do Python, vamos aprender sobre nossa primeira estrutura condicional.
+
+Sua sintaxe é bem simples, bastando utilizarmos if seguido pela condicao seguido por dois pontos:
+
+EXEMPLO
+
+~~~~python
+valor = 10
+
+if valor > 5:
+    print('O valor é maior que 5.')
+
+    SAIDA 
+    # O valor é maior do que 5
+~~~~
+
+>*Neste caso, a condição está testando se o valor presente na variável valor é maior que 5. Caso seja true, a linha de código abaixo será executada (nesse exemplo, a chamada à função print()).
+
+Caso você precise que um bloco de código seja sempre executado, basta adicionar True à condição:
+
+~~~~python
+if True:
+    print("Este bloco sempre irá ser executado.")
+~~~~
+
+** Estrutura Condicional if/else
+
+Vimos na seção acima que o if executa um bloco de código se sua condição for atendida, mas e se ela não for atendida e você deseja realizar outra ação? 
+Bom, basta utilizarmos a estrutura condicional else!
+
+Com ela, toda vez que uma condição não for atendida, o Python executará o bloco de código definido abaixo da cláusula else.
+
+EXEMPLO
+
+~~~~python
+idade = 20
+
+if idade < 17:
+    print('A idade é MENOR que 17')
+else:
+    print('A idade é MAIOR que 17')
+
+    SAIDA
+    A idade é MAIOR que 17
+~~~~
+
+>* Neste caso, a condição testa se o valor da variável idade é menor que 17. Porém, como 17 é menor que 20, o bloco else é então executado, resultando em:
+
+** Estrutura Condicional if-elif-else
+
+O elif é utilizando quando mais de uma condição if precisa ser testada. 
+
+EXEMPLO
+
+~~~~python
+linguagem = "Python"
+
+if linguagem == "C++":
+    print('C++ é uma linguagem de programação compilada.')
+elif linguagem == "Python":
+    print("Python é uma linguagem de programação de alto nível")
+elif linguagem == "Java":
+    print("Java é uma linguagem de programação amplamante utilizada no mercado")
+else:
+    print('Não é nenhuma das duas opções')
+
+SAIDA
+Python é uma linguagem de programação de alto nível
+
+~~~~~
+
+>*Neste exemplo, estamos verificando o valor da variável linguagem em diversos testes. Note que a saída é exatamente o resultado da execução do elif, ja que a o valor da variável linguagem é igual à “Python”:
