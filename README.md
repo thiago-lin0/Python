@@ -2,16 +2,27 @@
 
 ---
 
-### Sumário
+# Sumário
 
-[Estudos de Python](#estudos-de-python)
-[Sumário](#sumário) 1.[Objetivos](#objetivos) 2.[Comentários no Python](#comentários-no-python) 3.[Print e argumentos nomeados e não nomeados](#print-e-argumentos-nomeados-e-não-nomeados) 4.[Tipos de dados](#tipos-de-dados) 5.[Typecasting ou conversão de tipos](#typecasting) 6.[Exercicios](#exercicio) 7.[Variáveis](#var) 8.[Input e interação com o usuário](#input) 9.[Exercicios](#exerVar) 10.[Operadores aritimédicos](#oAritimedicos) 11.[Exercicio](#exercicioOpe)
+
+### Sumário
+1.[Objetivos](#objetivos) 
+2.[Comentários no Python](#comentários-no-python) 
+3.[Print e argumentos nomeados e não nomeados](#print-e-argumentos-nomeados-e-não-nomeados) 
+4.[Tipos de dados](#tipos-de-dados) 
+5.[Typecasting ou conversão de tipos](#typecasting) 
+6.[Exercicios](#exercicio) 
+7.[Variáveis](#var) 
+8.[Input e interação com o usuário](#input) 
+9.[Exercicios](#exerVar) 
+10.[Operadores aritimédicos](#oAritimedicos) 
+11.[Exercicio](#exercicioOpe)
 
 ---
 
 <div id='objetivos'>
 
-\*\* Objetivos
+## Objetivos
 
 Esse repositorio tem o intuito de estudos e deixar documentada para outras pessoas que queiram aprender python (e para mim caso me esqueça), esse Documento vai ter explicação e exercicios para podermo práticar juntos.
 
@@ -19,7 +30,7 @@ Esse repositorio tem o intuito de estudos e deixar documentada para outras pesso
 
 <div id='comentários-no-python'>
   
-** Comentários no Python
+## Comentários no Python
   
 No python existem o documentário de uma linha usando a #, também esxite a docstring porém não é um comentário, mas caso você queira fazer um comentário de varias linhas, podemos usar ela, ''' seu comentário ''' ou """ seu comentario aqui """
 
@@ -39,8 +50,9 @@ docstring
 
 <div id='print-e-argumentos-nomeados-e-não-nomeados'>
  
-** Print e argumentos nomeados e não nomeados
-  print é uma função que recebe argumentos não nomeadoe e argumentos nomeados, argumentos nomeados é a passagem de valores fazendo associação com o nome do parâmetro e o valor que está sendo enviado já os não nomeado ou posicionais são utilizado para a passagem de valores onde cada valor estara na ordem conforme implementado na função.
+## Print e argumentos nomeados e não nomeados
+
+print é uma função que recebe argumentos não nomeadoe e argumentos nomeados, argumentos nomeados é a passagem de valores fazendo associação com o nome do parâmetro e o valor que está sendo enviado já os não nomeado ou posicionais são utilizado para a passagem de valores onde cada valor estara na ordem conforme implementado na função.
   
 EXEMPLO
  ~~~python
@@ -57,11 +69,11 @@ EXEMPLO
  
  <div id='tipos-de-dados'>
  
- ** Tipos de dados
+## Tipos de dados
 
 Nessa parte vamos falar sobre os diversos Tipos de Variáveis do Python. Independente se você vem de outra linguagem ou se está começando agora no Python, saber quais são e como utilizá-las é muito importante para desenvolvermos um código em Python. Vamos falar de alguns tipos nessa seção.
 
-\*\*\* Tipo String (str)
+### Tipo String (str)
 
 É um conjunto de caracteres dispostos numa determinada ordem, geralmente utilizada para representar palavras, frases ou textos.
 
@@ -80,7 +92,7 @@ SAIDA
 
 ```
 
-\*\*\* Tipo inteito (int)
+### Tipo inteito (int)
 
 O tipo inteiro é um tipo composto por caracteres numéricos (algarismos) inteiros.É um tipo usado para um número que pode ser escrito sem um componente decimal, podendo ter ou não sinal, isto é: ser positivo ou negativo.
 
@@ -101,7 +113,7 @@ SAIDA
 <class 'int'> 2023
 ```
 
-\*\*\* Tipo float
+### Tipo float
 
 É um tipo composto por caracteres numéricos (algarismo) decimais.O famoso ponto flutuante é um tipo usado para números racionais (números que podem ser representados por uma fração) informalmente conhecido como “número quebrado”.
 
@@ -125,7 +137,7 @@ SAIDA
 
 ```
 
-\*\*\* tipo boolean (bool)
+### tipo boolean (bool)
 
 Tipo de dado lógico que pode assumir apenas dois valores: falso ou verdadeiro (False ou True em Python).Na lógica computacional, podem ser considerados como 0 ou 1.
 
@@ -150,7 +162,7 @@ SAIDA
 
  <div id='typescasting'>
 
-\*\* Conversão de tipos ou Typecasting
+## Conversão de tipos ou Typecasting
 
 Em Python, existem dois tipos de dados numéricos: inteiros e números de ponto flutuante (float). Às vezes, ao trabalhar no código de outra pessoa, será necessário converter um inteiro para um float ou vice-versa. Em outros casos, você pode estar usando um inteiro quando o que realmente precisa é de um float. O Python possui métodos integrados para permitir a conversão de inteiros em floats e floats em inteiros.
 
@@ -173,7 +185,7 @@ SAIDA
         57.0
      ~~~~
 
-\*\*\* Convertendo floats em inteiros
+### Convertendo floats em inteiros
 
 O Python também possui uma função integrada para converter floats em inteiros: int(). A função int() funciona de maneira semelhante à função float(): é possível adicionar um número de ponto flutuante dentro dos parênteses para convertê-lo em um inteiro:
 
@@ -186,7 +198,7 @@ O Python também possui uma função integrada para converter floats em inteiros
 
 > - Ao converter os floats em inteiros com a função int(), o Python corta a casa decimal e os números do float que restam são usados para criar um inteiro. Embora talvez você queira arredondar 390,8 para 391, o Python não fará isso através da função int().
 
-\*\*\* Convertendo String
+### Convertendo String
 
 Uma string é uma sequência de um ou mais caracteres (letras, números ou símbolos). As strings são uma forma comum de dados em programas de computador. Muitas vezes, pode ser necessário converter strings em números e números em strings, especialmente quando estivermos incluindo dados gerados pelo usuário.
 
@@ -201,19 +213,19 @@ Primeiro, vamos ver como converter inteiros. Para converter o inteiro 12 em um v
        '12'
 ```
 
-\*\*\* Convertendo strings em números
+### Convertendo strings em números
 
 As strings podem ser convertidas em números usando os métodos int() e float(). Se sua string não tiver casas decimais, você provavelmente vai querer convertê-la em um número inteiro, usando o método int().
 
 <div id='exercicio'>
 
-\*\* Exercicios
+## Exercicios
 
 > - Apartir de agora vai ter exercicios tanto teoricos quanto práticos para podermos nos analisar se estamos aprendendo. então você já está apto a fazer os 3 primeiros teste
 
 <div id='var'>
 
-\*\* Variáveis em Python
+## Variáveis em Python
 
 Variaveis são usadas para salvar algo na memoria do computador
 PEP8: inicie variaveis com letras minusculas pode usar numeros e underline\_
@@ -246,7 +258,7 @@ print(f'{imc:.2f}')
 
 <div id='input'>
 
-\*\* Input e interção com o usuário
+## Input e interção com o usuário
 
 Esse é um artifício muito comum em programação, quando precisamos que o usuário passe ao programa algum tipo de dado. Em Python, fazemos isso utilizando a função input(), que é literalmente ‘entrada’ em inglês.
 A função input() recebe como parâmetro uma string que será mostrada como auxílio ao usuário, geralmente o informando que tipo de dado o programa está aguardando receber.
@@ -266,13 +278,13 @@ print(f'A soma dos Valores é: {valor1 + valor2}')
 
 <div id='exerVar'>
 
-\*\* Exercicios Práticos
+## Exercicios Práticos
 
 Chegou a hora de fazermos o nosso primeiro teste prático então vá la na pasta teste e faça o nosso teste04.py, caso você queira a resolução é só falar
 
 <div id='oAritimedicos'>
 
-\*\* Operadore aritimédicos
+## Operadore aritimédicos
 
 Esses operadores são utilizados para criarmos expressões matemáticas comuns, como soma, subtração, multiplicação e divisão.
 
@@ -320,28 +332,23 @@ print(exponenciacao)  # Resultado: 16
 \*_ Concatenação (+) e repetição (_) com operadores aritimédicos
 Também podemos unir ou concatenar letras com o sinal de (+), ou letras com números, já o operador (\*) quando multiplicado com uma string ele irá repetir essa str quantas vezes o numero que você multiplicou
 
-\*\*\* Precedência entre Operadores
+### Precedência entre Operadores
 
-A hierarquia vai de cima para baixo
+A hierarquia vai da esquerda para direita
 
-()  
-\*\*
-
-- /
-
-* -
+>* (),  **, *, /, + -
 
 Os operadores com a mesma precedência são avaliados da esquerda para a direita
 
 <div id='exercicioOpe'>
 
-\*\* Exercicios
+## Exercicios
 
 Agora vá e teste seu conhecimento resolvendo o teste05.py
 
 <div id='comparacao'>
 
-\*\* Operadores de Comparação
+## Operadores de Comparação
 Como o nome já diz, esses Operadores são usados para comparar dois valores:
 
 | Operador | Nome           | Função                                               |
@@ -386,7 +393,7 @@ SAIDA
 
 ```
 
-\*\* Operadore de Atribuição
+## Operadore de Atribuição
 Esse Operadores são utilizados no momento da atribuição de valores à variáveis e controlam como a atribuição será realizada.
 
 | Operador | Equivale   |
@@ -400,7 +407,7 @@ Esse Operadores são utilizados no momento da atribuição de valores à variáv
 
 EXEMPLO
 
-Operador +=:
+**Operador +=:**
 
 ```python
 numero = 5
@@ -410,7 +417,7 @@ print(numero)  # Resultado será 10
 
 ---
 
-Operador -=:
+**Operador -=:**
 
 ```python
 numero = 5
@@ -420,7 +427,7 @@ print(numero)  # Resultado será 2
 
 ---
 
-operador \*=
+**operador \*=**
 
 ```python
 numero = 5
@@ -430,7 +437,7 @@ print(numero)  # Resultado será 10
 
 ---
 
-operador /=
+**operador /=**
 
 ```python
 numero = 5
@@ -440,7 +447,7 @@ print(numero)  # Resultado será 1.25
 
 ---
 
-operador %=
+**operador %=**
 
 ```python
 numero = 5
@@ -448,7 +455,7 @@ numero %= 2
 print(numero)  # Resultado será 1
 ```
 
-\*\* Operdares Lógicos
+## Operdares Lógicos
 
 Esses Operadores nos possibilitam construir um tipo de teste muito útil e muito utilizado em qualquer programa Python: os testes lógicos.
 
@@ -481,7 +488,7 @@ if not (num1 < 30 and num2 < 8):
     print('Inverte o resultado da condição entre os parânteses')
 ```
 
-\*\* Estrutura de Condição
+## Estrutura de Condição
 
 Agora que já está craque com os Operadores do Python, vamos aprender sobre nossa primeira estrutura condicional.
 
@@ -501,14 +508,14 @@ if valor > 5:
 
 > \*Neste caso, a condição está testando se o valor presente na variável valor é maior que 5. Caso seja true, a linha de código abaixo será executada (nesse exemplo, a chamada à função print()).
 
-Caso você precise que um bloco de código seja sempre executado, basta adicionar True à condição:
+Caso você precise que um bloco de código que seja sempre executado, basta adicionar True à condição:
 
 ```python
 if True:
     print("Este bloco sempre irá ser executado.")
 ```
 
-\*\* Estrutura Condicional if/else
+## Estrutura Condicional if/else
 
 Vimos na seção acima que o if executa um bloco de código se sua condição for atendida, mas e se ela não for atendida e você deseja realizar outra ação?
 Bom, basta utilizarmos a estrutura condicional else!
@@ -531,7 +538,7 @@ else:
 
 > - Neste caso, a condição testa se o valor da variável idade é menor que 17. Porém, como 17 é menor que 20, o bloco else é então executado, resultando em:
 
-\*\* Estrutura Condicional if-elif-else
+## Estrutura Condicional if-elif-else
 
 O elif é utilizando quando mais de uma condição if precisa ser testada.
 
@@ -557,9 +564,10 @@ Python é uma linguagem de programação de alto nível
 > \*Neste exemplo, estamos verificando o valor da variável linguagem em diversos testes. Note que a saída é exatamente o resultado da execução do elif, ja que a o valor da variável linguagem é igual à “Python”:
 
 EXERCICIOS
-Agora pare um momento e vá testa seus conhecimentos com os operadores que acabamos de estudar
+Agora pare um momento e vá testar seus conhecimentos com os operadores que acabamos de estudar
 
-\*\* Operadores de Associação
+## Operadores de Associação
+
 Por último, temos os Operadores de Associação. Eles servem para verificar se determinado objeto está associado ou pertence a determinada estrutura de dados.
 
 | Operador | Equivale                                                   |
@@ -582,7 +590,7 @@ print('SQL' not in lista) # Saída: True
 EXERCICIOS
 agora faça o teste testeo7.md
 
-\*\* Formatação de strings com f-strings
+## Formatação de strings com f-strings
 
 F-strings foram criados para facilitar nossa vida e vieram para ficar! Também chamadas de “strings literais formatadas” (formatted string literals), f-strings são strings com a letra f no início e chaves {} para realizar a interpolação de expressões.
 
@@ -622,7 +630,7 @@ print(f'cos({x}) = {math.cos(x)}')
 
 ```
 
-\*\*Fatiamento de strings
+## Fatiamento de strings
 
 Um segmento de uma string é chamado de fatia. Selecionar uma fatia é como selecionar um caractere:
 
@@ -657,7 +665,7 @@ SAIDA
 'ana'
 ```
 
-\*\* Função len()
+## Função len()
 
 A função Len() existe para que possamos evitar de ter que ficar contando no dedo quantos itens tem uma lista ou quantas vezes aquele programa está entrando em um bloco de código. Ao utilizar essa função, é possível ter de imediato o resultado que precisamos.
 
@@ -672,7 +680,7 @@ SAIDA
 EXERCICIOS
 Agora vamos da uma práticada, faça o exercicio teste08.py
 
-** Try e Except
+## Try e Except
 Em resumidas palavras o **try** é um bloco que permite testar um bloco de código para erros, já o **except\*\* é o bloco que permite o manuseio do erro
 
 Quando ocorre um erro ou exceção como o chamamos, o Python normalmente para e gerar uma mensagem de erro. Essas exceções podem ser tratadas usando o try declaração:
