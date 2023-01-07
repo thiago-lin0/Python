@@ -4,19 +4,33 @@
 
 # Sumário
 
-
 ### Sumário
-1.[Objetivos](#objetivos) 
-2.[Comentários no Python](#comentários-no-python) 
-3.[Print e argumentos nomeados e não nomeados](#print-e-argumentos-nomeados-e-não-nomeados) 
-4.[Tipos de dados](#tipos-de-dados) 
-5.[Typecasting ou conversão de tipos](#typecasting) 
-6.[Exercicios](#exercicio) 
-7.[Variáveis](#var) 
-8.[Input e interação com o usuário](#input) 
-9.[Exercicios](#exerVar) 
-10.[Operadores aritimédicos](#oAritimedicos) 
-11.[Exercicio](#exercicioOpe)
+
+- [Objetivos](#objetivos)
+- [Comentários no Python](#comentários-no-python)
+- [Print e argumentos nomeados e não nomeados](#print-e-argumentos-nomeados-e-não-nomeados)
+- [Tipos de dados](#tipos-de-dados) -[Tipo String (str)](#string) -[Tipo inteito (int)](#int) -[Tipo Float](#float) -[Tipo Bollean (bool)](#bool)
+- [Typecasting ou conversão de tipos](#typecasting) -[Convertendo floats em inteiros](#floats-int) -[Convertendo String](#convertStrings) -[Convertendo strings em números](#stringsNumeros)
+- [Exercicios](#exercicio)
+- [Variáveis](#var)
+- [Input e interação com o usuário](#input)
+- [Exercicios](#exerVar)
+- [Operadores aritimédicos](#oAritimedicos) -[Concatenação (+) e repetição (\*) com operadores aritimédicos](#concat) -[Precedência entre Operadores](#precedencia)
+- [Exercicio](#exercicioOpe)
+- [Operadores de Comparação](#opComparacao)
+- [Operadores de Atribuição](#OpAtribuicao)
+- [Operadores Lóficos](#OpLogicos)
+- [Estrutura de Condição](#condicao) -[if/else](#ifelse) -[if-elif-else](#ifelifelse)
+- [Exercicios](#exercicio01)
+- [Operadores de Associação](#opAssociacao)
+- [Exercicios](#exercicios02)
+- [Formatação de strings com f-strings](#f-strings)
+- [Fatiamento de Strings](#fatiamentoStrings)
+- [Função len()](#funcaolen)
+- [Exercicios](#exercicio03)
+- [Try e Except](#tryExcept)
+- [Exercicio](#exercicio04)
+- [Estrutura de repetição](#estruturaDeRepeticao) -[O while](#while) -[Exercicio](#exercicio05)
 
 ---
 
@@ -53,20 +67,22 @@ docstring
 ## Print e argumentos nomeados e não nomeados
 
 print é uma função que recebe argumentos não nomeadoe e argumentos nomeados, argumentos nomeados é a passagem de valores fazendo associação com o nome do parâmetro e o valor que está sendo enviado já os não nomeado ou posicionais são utilizado para a passagem de valores onde cada valor estara na ordem conforme implementado na função.
-  
+
 EXEMPLO
- ~~~python
-  #argumentos não nomeados
-  print(12,34)
-  
-  '''
-  quando vemos a saida dos argumentos ele já vem com espaço
-  podemos modificar esse espaço com argumento nomeados sep=""
+
+```python
+ #argumentos não nomeados
+ print(12,34)
+
+ '''
+ quando vemos a saida dos argumentos ele já vem com espaço
+ podemos modificar esse espaço com argumento nomeados sep=""
 '''
-  print(56,78, sep="-")
- ~~~~
- *******
- 
+ print(56,78, sep="-")
+```
+
+---
+
  <div id='tipos-de-dados'>
  
 ## Tipos de dados
@@ -258,7 +274,7 @@ print(f'{imc:.2f}')
 
 <div id='input'>
 
-## Input e interção com o usuário
+## Input e interação com o usuário
 
 Esse é um artifício muito comum em programação, quando precisamos que o usuário passe ao programa algum tipo de dado. Em Python, fazemos isso utilizando a função input(), que é literalmente ‘entrada’ em inglês.
 A função input() recebe como parâmetro uma string que será mostrada como auxílio ao usuário, geralmente o informando que tipo de dado o programa está aguardando receber.
@@ -284,7 +300,7 @@ Chegou a hora de fazermos o nosso primeiro teste prático então vá la na pasta
 
 <div id='oAritimedicos'>
 
-## Operadore aritimédicos
+## Operadores aritimédicos
 
 Esses operadores são utilizados para criarmos expressões matemáticas comuns, como soma, subtração, multiplicação e divisão.
 
@@ -329,14 +345,15 @@ print(exponenciacao)  # Resultado: 16
 
 ```
 
-\*_ Concatenação (+) e repetição (_) com operadores aritimédicos
+### Concatenação (+) e repetição (\_) com operadores aritimédicos
+
 Também podemos unir ou concatenar letras com o sinal de (+), ou letras com números, já o operador (\*) quando multiplicado com uma string ele irá repetir essa str quantas vezes o numero que você multiplicou
 
 ### Precedência entre Operadores
 
 A hierarquia vai da esquerda para direita
 
->* (),  **, *, /, + -
+> (), \*_, _, /, + -
 
 Os operadores com a mesma precedência são avaliados da esquerda para a direita
 
@@ -349,6 +366,7 @@ Agora vá e teste seu conhecimento resolvendo o teste05.py
 <div id='comparacao'>
 
 ## Operadores de Comparação
+
 Como o nome já diz, esses Operadores são usados para comparar dois valores:
 
 | Operador | Nome           | Função                                               |
@@ -394,6 +412,7 @@ SAIDA
 ```
 
 ## Operadore de Atribuição
+
 Esse Operadores são utilizados no momento da atribuição de valores à variáveis e controlam como a atribuição será realizada.
 
 | Operador | Equivale   |
@@ -515,7 +534,7 @@ if True:
     print("Este bloco sempre irá ser executado.")
 ```
 
-## Estrutura Condicional if/else
+### Estrutura Condicional if/else
 
 Vimos na seção acima que o if executa um bloco de código se sua condição for atendida, mas e se ela não for atendida e você deseja realizar outra ação?
 Bom, basta utilizarmos a estrutura condicional else!
@@ -538,7 +557,7 @@ else:
 
 > - Neste caso, a condição testa se o valor da variável idade é menor que 17. Porém, como 17 é menor que 20, o bloco else é então executado, resultando em:
 
-## Estrutura Condicional if-elif-else
+### Estrutura Condicional if-elif-else
 
 O elif é utilizando quando mais de uma condição if precisa ser testada.
 
@@ -561,7 +580,7 @@ Python é uma linguagem de programação de alto nível
 
 ```
 
-> \*Neste exemplo, estamos verificando o valor da variável linguagem em diversos testes. Note que a saída é exatamente o resultado da execução do elif, ja que a o valor da variável linguagem é igual à “Python”:
+> Neste exemplo, estamos verificando o valor da variável linguagem em diversos testes. Note que a saída é exatamente o resultado da execução do elif, ja que a o valor da variável linguagem é igual à “Python”:
 
 EXERCICIOS
 Agora pare um momento e vá testar seus conhecimentos com os operadores que acabamos de estudar
@@ -681,7 +700,8 @@ EXERCICIOS
 Agora vamos da uma práticada, faça o exercicio teste08.py
 
 ## Try e Except
-Em resumidas palavras o **try** é um bloco que permite testar um bloco de código para erros, já o **except\*\* é o bloco que permite o manuseio do erro
+
+Em resumidas palavras o **try** é um bloco que permite testar um bloco de código para erros, já o \*\*except\*\* é o bloco que permite o manuseio do erro
 
 Quando ocorre um erro ou exceção como o chamamos, o Python normalmente para e gerar uma mensagem de erro. Essas exceções podem ser tratadas usando o try declaração:
 
@@ -694,16 +714,16 @@ except:
   # O try bloco irá gerar uma exceção, porque x não está definido:
 ```
 
-> \*Como o bloco de tentativa gera um erro, o bloco de exceção será executado. Sem o bloco de tentativas, o programa travará e gerará um erro:
+> Como o bloco de tentativa gera um erro, o bloco de exceção será executado. Sem o bloco de tentativas, o programa travará e gerará um erro:
 
 EXERCICIOS
 tente fazer o teste09.py
 
-\*\* Estrutura de Repetição
+## Estrutura de Repetição
 
 O python exitem 2 estruturas de repetição o **while** e o **for**, agora iremos aprendor o while
 
-## O loop While
+### O loop While
 
 Com o while, podemos executar um conjunto de instruções, desde que uma condição seja verdadeira.
 
@@ -715,7 +735,7 @@ while i < 6: # condição
   i += 1 # adicionando + 1 no acumulador
 ```
 
-> \*obs: lembre-se de incrementar i, caso contrário o loop continuará para sempre.
+> _obs: lembre-se de incrementar i, caso contrário o loop continuará para sempre._
 
 a declaração de break
 Com o break, podemos parar o loop mesmo que while seja verdadeira:
