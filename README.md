@@ -22,7 +22,7 @@
 7. [Variáveis](#var)
 8. [Input e interação com o usuário](#input)
 9. [Exercicios](#exerVar)
-10.[Operadores aritimédicos](#oAritimedicos) 
+10. [Operadores aritimédicos](#oAritimedicos) 
     - [Concatenação (+) e repetição (\*) com operadores aritimédicos](#concat) 
     - [Precedência entre Operadores](#precedencia)
 11. [Exercicio](#exercicioOpe)
