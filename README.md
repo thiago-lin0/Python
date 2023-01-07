@@ -9,29 +9,29 @@
 1. [Objetivos](#objetivos)
 2. [Comentários no Python](#comentários-no-python)
 3. [Print e argumentos nomeados e não nomeados](#print-e-argumentos-nomeados-e-não-nomeados)
-4. [Tipos de dados](#tipos-de-dados) 
-    -  [Tipo String (str)](#string) 
-    -  [Tipo inteito (int)](#int) 
-    -  [Tipo Float](#float) 
-    -  [Tipo Bollean (bool)](#bool)
-5. [Typecasting ou conversão de tipos](#typecasting) 
-    - [Convertendo floats em inteiros](#floats-int) 
-    - [Convertendo String](#convertStrings) 
-    - [Convertendo strings em números](#stringsNumeros)
+4. [Tipos de dados](#tipos-de-dados)
+   - [Tipo String (str)](#string)
+   - [Tipo inteito (int)](#int)
+   - [Tipo Float](#float)
+   - [Tipo Bollean (bool)](#bool)
+5. [Typecasting ou conversão de tipos](#typecasting)
+   - [Convertendo floats em inteiros](#floats-int)
+   - [Convertendo String](#convertStrings)
+   - [Convertendo strings em números](#stringsNumeros)
 6. [Exercicios](#exercicio)
 7. [Variáveis](#var)
 8. [Input e interação com o usuário](#input)
 9. [Exercicios](#exerVar)
-10. [Operadores aritimédicos](#oAritimedicos) 
-    - [Concatenação (+) e repetição (\*) com operadores aritimédicos](#concat) 
+10. [Operadores aritimédicos](#oAritimedicos)
+    - [Concatenação (+) e repetição (\*) com operadores aritimédicos](#concat)
     - [Precedência entre Operadores](#precedencia)
 11. [Exercicio](#exercicioOpe)
 12. [Operadores de Comparação](#opComparacao)
 13. [Operadores de Atribuição](#OpAtribuicao)
 14. [Operadores Lóficos](#OpLogicos)
-15. [Estrutura de Condição](#condicao) 
-    -   [if/else](#ifelse) 
-    -   [if-elif-else](#ifelifelse)
+15. [Estrutura de Condição](#condicao)
+    - [if/else](#ifelse)
+    - [if-elif-else](#ifelifelse)
 16. [Exercicios](#exercicio01)
 17. [Operadores de Associação](#opAssociacao)
 18. [Exercicios](#exercicios02)
@@ -41,9 +41,11 @@
 22. [Exercicios](#exercicio03)
 23. [Try e Except](#tryExcept)
 24. [Exercicio](#exercicio04)
-25. [Estrutura de repetição](#estruturaDeRepeticao) 
-    -   [O while](#while) 
-    -   [Exercicio](#exercicio05)
+25. [Estrutura de repetição](#estruturaDeRepeticao)
+    - [O while](#while)
+    - [Exercicio](#exercicio05)
+    - [for in](#for)
+26. [Tipo list](#list)
 
 ---
 
@@ -778,5 +780,157 @@ while i < 6:
   print(i)
 ```
 
-EXERCICIO
+#### EXERCICIO
+
 pratique um pouco os exercicios de while faça o teste09.py
+
+### Introdução ao for in
+
+o for é usado para iterar uma sequência ( que é uma lista, uma tupla, um dicionário, um conjunto ou uma sequência ).
+
+Isso é menos parecido com o for palavra-chave em outras linguagens de programação e funciona mais como um método iterador, conforme encontrado em outras linguagens de programação orientadas a objetos.
+
+Com o for, podemos executar um conjunto de instruções, uma vez para cada item em uma lista, tupla, conjunto etc.
+
+EXEMPLO
+
+```python
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+  SAIDA
+  'apple'
+  'bnana'
+  'cherry'
+```
+
+O for não requer que uma variável de indexação seja definida previamente.
+
+Até as strings são objetos iteráveis, elas contêm uma sequência de caracteres:
+
+```python
+for x in "banana":
+  print(x)
+```
+
+### A declaração de break
+
+Com o break podemos parar o loop antes de percorrer todos os itens:
+
+```python
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+```
+
+### A declaração continue
+
+Com o continue podemos parar o iteração atual do loop e continuar com o próximo:
+
+```python
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x)
+  # nao vai imorimir banana
+```
+
+### A função range()
+
+Para percorrer um conjunto de códigos várias vezes, podemos usar o range( ),
+O range( ) é uma função que retorna uma sequência de números, começando em 0 por padrão e incrementa em 1 ( por padrão ) e termina em um número especificado.
+
+```python
+for x in range(6):
+  print(x)
+
+  '''
+  SAIDA
+  0
+  1
+  2
+  3
+  4
+  5
+  '''
+```
+
+> O range( ) é padronizada como 0 como um valor inicial, no entanto, é possível especificar o valor inicial adicionando um parâmetro: intervalo ( 2, 6 ), que significa valores de 2 a 6 (, mas não incluindo 6 :
+
+```python
+for x in range(2, 6):
+  print(x)
+
+  '''
+    SAIDA
+    2
+    3
+    4
+    5
+  '''
+```
+
+> O range( ) por padrão função incrementa a sequência em 1, no entanto, é possível especificar o valor do incremento adicionando um terceiro parâmetro: range( 2, 30, 3):
+
+```python
+for x in range(2, 30, 3):
+  print(x)
+
+  '''
+  SAIDA
+  2
+  5
+  8
+  11
+  14
+  17
+  20
+  23
+  26
+  29
+  '''
+```
+
+### else no for loop
+
+O else palavra-chave em um for loop especifica um bloco de código a ser executado quando o loop é concluído:
+
+```python
+for x in range(6):
+  print(x)
+else:
+  print("Finally finished!")
+```
+
+> Nota: O bloco do else NÃO será executado se o loop for parado por um break declaração.
+
+### Loops aninhados
+
+Um loop aninhado é um loop dentro de um loop.
+O "loop interno" será executado uma vez para cada iteração do "externo loop":
+
+```python
+adj = ["red", "big", "tasty"]
+frutas = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in frutas:
+    print(x, y)
+```
+
+### Qual usar while ou o for?
+
+Eles são laços de repetição e ambos fazem a mesma coisa, porem...
+
+for: **é geralmente usado quando você sabe o número de iterações de antemão. Por exemplo para percorrer um array de 10 elementos**
+
+while: **while é usado quando você tem uma idéia sobre a faixa de valores em que para fazer uma iteração, mas não sei o número exato de iterações que ocorrem.**
+
+porem o for em bem mais rapido na execução segue o link
+link: https://www.youtube.com/watch?v=aNsw0Bl8t6A
+
+## Tipo List
