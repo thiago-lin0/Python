@@ -1289,3 +1289,188 @@ while i < len(list):
 | remove()  | Remove o elemento na posição especificada                                          |
 | reverse() | Inverte a ordem da lista                                                           |
 | sort()    | Classifica a lista                                                                 |
+
+### Introdução ao Desempacotamento + tuples (tuplas)
+
+você tambêm pode transformar todos os dados de uma list em variaveis usando o desempacotamento
+
+```python
+nomes = ['Thiago', 'Marcos', 'Vitória'] #pacote
+nome1, nome2, nome3 = nomes # Desempacotamentos
+print(nome2)
+# podemos fazer desse modo também
+nome1, nome2, nome3 = ['Thiago', 'Marcos', 'Vitória']
+print(nome2)
+'''
+SAIDA
+'Marcos'
+'Marcos'
+'''
+```
+
+### desempacotando só um dado de uma list
+
+```python
+nome1, *resto = ['Thiago', 'Marcos', 'Vitória']
+print(resto)
+
+'''
+SAIDA
+['Marcos', 'Vitória']
+'''
+```
+
+> desempacotei somente o primeiro index e empacotei de volta o resto da minha lista
+
+certo,porem se eu quiser pegar o 2° termo da minha lista
+
+```python
+_, nome2, *resto = ['Thiago', 'Marcos', 'Vitória']
+print(nome2)
+
+'''
+SAIDA
+'Marcos'
+'''
+```
+
+> caso você não vá usar os outros dados, por conveção colocamo \_(underline) para identificar que usaremos
+
+## Tuple _(Tupla)_
+
+As tuplas são usadas para armazenar vários itens em uma única variável.
+diferente da lista a tuple é uma coleção encomendada e **imutável**.
+
+```python
+tuple = ("apple", "banana", "cherry")
+print(tuple)
+
+'''
+SAIDA
+("apple", "banana", "cherry")
+'''
+```
+
+> Tudo que aprendemos sobre list serve também para as tuplas
+
+> Oque você quiser fazer com uma lista mas não irá alterar a mesma, você pode utilizar uma tuple
+
+> obs:. a lista é um pouco mais lenta que a list
+
+### Convertendo uma lista em tuple
+
+```python
+nomes = ['Thiago', 'Marcos', 'Vitória']
+nomes = tuple(nomes)
+#posso fazer o inverso tambem
+nomes = list(nomes)
+```
+
+## Enumerate()
+
+Muitas vezes, ao lidar com iteradores, também precisamos manter uma contagem de iterações. O Python facilita a tarefa dos programadores ’, fornecendo uma função interna enenumerate( ) para esta tarefa. O método enumerate ( ) adiciona um contador a um iterável e o retorna na forma de enumerar objeto. Esse objeto enumerado pode ser usado diretamente para loops ou convertido em uma lista de tuplas usando o método list ( ).
+
+### Sintaxe:
+
+```python
+enumerar ( iterável, iniciar = 0 )
+```
+
+Parâmetros:
+
+- Iterável: qualquer objeto que suporte a iteração
+- Iniciar: o valor do índice a partir do qual o contador deve ser iniciado, por padrão é 0
+
+EXEMPLO
+
+```python
+l1 = ["eat", "sleep", "repeat"]
+s1 = "geek"
+
+obj1 = enumerate(l1)
+obj2 = enumerate(s1)
+
+
+print (list(enumerate(l1)))
+
+print (list(enumerate(s1, 2)))
+
+'''
+SAIDA
+
+[ ( 0, 'coma' ), ( 1, 'sono' ), ( 2, 'repita' ) ]
+[ ( 2, 'g' ), ( 3, 'e' ), ( 4, 'e' ), ( 5, 'k' ) ]
+'''
+```
+
+## Metódos útris para str _(string)_
+
+### split e join
+
+#### SPLIT
+
+ele fatia uma string e coloca dentro de uma list
+
+EXEMPLO
+
+```python
+frase = 'Olha só que, coisa interessante'
+lista_de_palavra = frase.split()
+print(lista_de_palavra)
+lista_de_frase = frase.split(',') #podemos passar onde queremos dividir
+print(lista_de_frase)
+
+'''
+SAIDA
+['Olha', 'só', 'que,', 'coisa', 'interessante']
+['Olha só que', ' coisa interessante']
+'''
+```
+
+#### JOIN
+
+une a string
+
+EXEMPLO
+
+```python
+for i, frase in enumerate(lista_de_frase):
+    print(lista_de_frase[i].strip())
+
+frases_unidas = '-'.join(lista_de_palavra)
+
+'''
+SAIDA
+Olha-só-que,-coisa-interessante
+'''
+```
+
+## Operádor ternário no python
+
+> <expressao1> if <condicao> else <expressao2>
+> Primeiro, a condição é avaliada (ao invés de expressao1), se a condição for verdadeira, expressao1 é avaliada e seu valor é retornado; caso contrário, expressao2 é avaliada e seu valor retornado.
+
+EXEMPLO
+
+```python
+x = 10
+print ("par" if x % 2 == 0 else "impar")
+
+'''
+SAIDA
+'par'
+'''
+```
+
+> <condicao> and <expressao1> or <expressao2>
+> No entanto, não funciona do mesmo modo que uma Expressão Condicional, se a condição for verdadeira, expressao1 é avaliada e seu valor retornado; se expressao1 for falso, expressao2 é avaliada e seu valor retornado.
+
+```python
+x = 10
+print (x % 2 == 0 and "par" or "impar")
+
+'''
+SAIDA
+'par'
+'''
+```
