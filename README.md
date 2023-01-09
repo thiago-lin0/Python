@@ -934,3 +934,351 @@ porem o for em bem mais rapido na execução segue o link
 link: https://www.youtube.com/watch?v=aNsw0Bl8t6A
 
 ## Tipo List
+
+As listas são usadas para armazenar vários itens em uma única variável.
+
+As listas são um dos **4 tipos de dados internos** no Python usados para armazenar coleções de dados, e elas são mutaveis suporta vários valores de qualquer tipo
+
+As listas são criadas usando colchetes:
+
+```python
+list = ["apple", "banana", "cherry"]
+print(list)
+
+'''
+"apple", "banana", "cherry"
+'''
+```
+
+\*\*\* Itens da lista
+Os itens da lista são interaveis e permitem valores duplicados.
+
+Os itens da lista são indexados, o primeiro item tem índice [0], o segundo item tem índice [1] etc.
+
+```python
+#           0         1         2
+list = ["apple", "banana", "cherry"]
+```
+
+\*\*\* Itens de acesso
+
+Os itens da lista são indexados e você pode acessá-los consultando o número do índice:
+
+```python
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+
+'''
+SAIDA
+'apple'
+'''
+```
+
+\*\*\* Indexação negativa
+
+Indexação negativa significa começar do final
+
+-1 refere-se ao último item, -2 refere-se ao segundo último item etc.
+
+```pyhton
+thislist = ["apple", "banana", "cherry"]
+print(thislist[-1])
+
+'''
+SAIDA
+'cherry'
+'''
+```
+
+\*\*\* Gama de índices
+Você pode especificar um intervalo de índices especificando por onde iniciar e por onde termine o intervalo.
+
+Ao especificar um intervalo, o valor de retorno será uma nova lista com o itens especificados.
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+
+'''
+SAIDA
+"cherry", "orange", "kiwi"
+'''
+```
+
+> Nota: A pesquisa começará no índice 2 ( incluído ) e terminará no índice 5 ( não incluído ).
+
+Ao deixar de fora o valor inicial, o intervalo começará no primeiro item:
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[:4])
+
+'''
+SAIDA
+"apple", "banana", "cherry", "orange"
+'''
+```
+
+Ao deixar de fora o valor final, o intervalo continuará até o final da lista:
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])
+
+'''
+SAIDA
+"cherry", "orange", "kiwi", "melon", "mango"
+'''
+```
+
+\*\*\* Verifique se o item existe
+
+Para determinar se um item especificado está presente em uma lista, use o in palavra-chave:
+
+```python
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
+
+  '''
+  SAIDA
+  "Yes, 'apple' is in the fruits list"
+  '''
+```
+
+\*\*\* Alterar valor do item
+Para alterar o valor de um item específico, consulte o número do índice:
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+'''
+saida
+"blackcurrant", "banana", "cherry"
+'''
+```
+
+\*\*\* Alterar uma faixa de valores de itens
+
+Para alterar o valor dos itens dentro de um intervalo específico, defina uma lista com os novos valores e consulte o intervalo de números de índice em que deseja inserir os novos valores:
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+'''
+SAIDA
+"apple", "blackcurrant", "watermelon", "orange", "kiwi", "mango"
+'''
+```
+
+\*\*\* Inserir itens
+Para inserir um novo item de lista, sem substituir nenhum dos valores existentes, podemos usar o insert().
+
+O insert() é um metódo que insere um item no índice especificado:
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+
+'''
+SAIDA
+"apple", "banana", "watermelon", "cherry"
+'''
+```
+
+> Nota: Como resultado do exemplo acima, a lista agora conterá 4 itens.
+
+\*\*\* Inserindo um item no final da lista
+com o metodo append() você consegue fazer esse feito
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.append("watermelon")
+print(thislist)
+
+'''
+SAIDA
+"apple", "banana", "cherry","watermelon"
+'''
+```
+
+\*\*\* Remover item especificado
+
+O remove() é um método remove o item especificado.
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+'''
+SAIDA
+"apple", "cherry"
+'''
+```
+
+\*\*\* Remover índice especificado
+
+O pop() é o método que remove o indice especificado.
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+'''
+SAIDA
+"apple", "cherry"
+'''
+```
+
+> Se você não especificar o índice, o pop() remove o último item.
+
+```Python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+'''
+saida
+"apple", "banana"
+'''
+```
+
+O **del** palavra-chave também remove o índice especificado :
+
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+'''
+SAIDA
+"banana", "cherry"
+'''
+```
+
+> O del a palavra-chave também pode excluir a lista completamente.
+
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist
+```
+
+\*\*\* Limpando a lista
+O clear() método esvazia a lista.
+
+> A lista ainda permanece, mas não tem conteúdo.
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+'''
+SAIDA
+[]
+'''
+```
+
+\*\*\* Concatendo Listas
+
+temos duas formas de concatenar as listas a primeira que vamos ver é criando uma nova variavel
+
+```python
+listA = [0,1,2,3,4,5]
+listB = [6,7,8,9,10]
+listC = listA + listB
+print(listC)
+```
+
+A outra forma é extendendo uma lista
+
+```python
+listA = [0,1,2,3,4,5]
+listB = [6,7,8,9,10]
+listA.extend(listB)
+print(listA)
+```
+
+\*\*\* Copiar uma lista
+
+Você não pode copiar uma lista simplesmente digitando list2 = list1, porque: list2 será apenas um referência para list1, e alterações feitas em list1 será automaticamente também feito list2.
+
+Existem maneiras de fazer uma cópia, uma maneira é usar a lista incorporada método copy().
+
+```python
+list = ["apple", "banana", "cherry"]
+mylist = list.copy()
+print(mylist)
+
+'''
+SAIDA
+"apple", "banana", "cherry"
+'''
+```
+
+> Outra maneira de fazer uma cópia é usar o método embutido list().
+
+```python
+frutas = ["apple", "banana", "cherry"]
+mylist = list(frutas)
+print(mylist)
+
+'''
+SAIDA
+"apple", "banana", "cherry"
+'''
+```
+
+\*\*\* Faça um loop através de uma lista
+Você pode percorrer os itens da lista usando um for loop:
+
+```python
+list = ["apple", "banana", "cherry"]
+for x in list:
+  print(x)
+
+  '''
+  SAIDA
+  "apple",
+  "banana",
+  "cherry"
+  '''
+```
+
+\*\*\* Usando um loop while
+Você pode percorrer os itens da lista usando um while loop.
+
+Use o len() função para determinar o comprimento da lista, comece em 0 e percorra os itens da lista consultando os índices.
+
+Lembre-se de aumentar o índice em 1 após cada iteração.
+
+```python
+list = ["apple", "banana", "cherry"]
+i = 0
+while i < len(list):
+  print(thislist[i])
+  i = i + 1
+```
+
+\*\*\* Métodos de lista
+
+| Metodo   | Descrição                                                                          |
+| -------- | ---------------------------------------------------------------------------------- |
+| append() | Adiciona um elemento no final da lista                                             |
+| clear()  | Remove todos os elementos da lista                                                 |
+| copy()   | Retorna uma cópia da lista                                                         |
+| count()  | Retorna o número de elementos com o valor especificado                             |
+| extend() | Adicionar os elementos de uma lista (ou qualquer iterável) ao final da lista atual |
+
+| index() | Retorna o índice do primeiro elemento com o valor especificado |
+| insert() | Adiciona um elemento na posição especificada |
+| remove() | Remove o elemento na posição especificada |
+| reverse()| Inverte a ordem da lista |
+| sort() |Classifica a lista |
