@@ -950,7 +950,8 @@ print(list)
 '''
 ```
 
-\*\*\* Itens da lista
+### Itens da lista
+
 Os itens da lista são interaveis e permitem valores duplicados.
 
 Os itens da lista são indexados, o primeiro item tem índice [0], o segundo item tem índice [1] etc.
@@ -960,7 +961,7 @@ Os itens da lista são indexados, o primeiro item tem índice [0], o segundo ite
 list = ["apple", "banana", "cherry"]
 ```
 
-\*\*\* Itens de acesso
+### Itens de acesso
 
 Os itens da lista são indexados e você pode acessá-los consultando o número do índice:
 
@@ -974,7 +975,7 @@ SAIDA
 '''
 ```
 
-\*\*\* Indexação negativa
+### Indexação negativa
 
 Indexação negativa significa começar do final
 
@@ -990,7 +991,8 @@ SAIDA
 '''
 ```
 
-\*\*\* Gama de índices
+### Gama de índices
+
 Você pode especificar um intervalo de índices especificando por onde iniciar e por onde termine o intervalo.
 
 Ao especificar um intervalo, o valor de retorno será uma nova lista com o itens especificados.
@@ -1031,7 +1033,7 @@ SAIDA
 '''
 ```
 
-\*\*\* Verifique se o item existe
+### Verifique se o item existe
 
 Para determinar se um item especificado está presente em uma lista, use o in palavra-chave:
 
@@ -1046,7 +1048,8 @@ if "apple" in thislist:
   '''
 ```
 
-\*\*\* Alterar valor do item
+### Alterar valor do item
+
 Para alterar o valor de um item específico, consulte o número do índice:
 
 ```python
@@ -1060,7 +1063,7 @@ saida
 '''
 ```
 
-\*\*\* Alterar uma faixa de valores de itens
+### Alterar uma faixa de valores de itens
 
 Para alterar o valor dos itens dentro de um intervalo específico, defina uma lista com os novos valores e consulte o intervalo de números de índice em que deseja inserir os novos valores:
 
@@ -1075,7 +1078,8 @@ SAIDA
 '''
 ```
 
-\*\*\* Inserir itens
+### Inserir itens
+
 Para inserir um novo item de lista, sem substituir nenhum dos valores existentes, podemos usar o insert().
 
 O insert() é um metódo que insere um item no índice especificado:
@@ -1093,7 +1097,8 @@ SAIDA
 
 > Nota: Como resultado do exemplo acima, a lista agora conterá 4 itens.
 
-\*\*\* Inserindo um item no final da lista
+### Inserindo um item no final da lista
+
 com o metodo append() você consegue fazer esse feito
 
 ```python
@@ -1107,7 +1112,7 @@ SAIDA
 '''
 ```
 
-\*\*\* Remover item especificado
+### Remover item especificado
 
 O remove() é um método remove o item especificado.
 
@@ -1122,7 +1127,7 @@ SAIDA
 '''
 ```
 
-\*\*\* Remover índice especificado
+### Remover índice especificado
 
 O pop() é o método que remove o indice especificado.
 
@@ -1170,7 +1175,8 @@ thislist = ["apple", "banana", "cherry"]
 del thislist
 ```
 
-\*\*\* Limpando a lista
+### Limpando a lista
+
 O clear() método esvazia a lista.
 
 > A lista ainda permanece, mas não tem conteúdo.
@@ -1186,7 +1192,7 @@ SAIDA
 '''
 ```
 
-\*\*\* Concatendo Listas
+### Concatendo Listas
 
 temos duas formas de concatenar as listas a primeira que vamos ver é criando uma nova variavel
 
@@ -1206,7 +1212,7 @@ listA.extend(listB)
 print(listA)
 ```
 
-\*\*\* Copiar uma lista
+### Copiar uma lista
 
 Você não pode copiar uma lista simplesmente digitando list2 = list1, porque: list2 será apenas um referência para list1, e alterações feitas em list1 será automaticamente também feito list2.
 
@@ -1236,7 +1242,8 @@ SAIDA
 '''
 ```
 
-\*\*\* Faça um loop através de uma lista
+### Faça um loop através de uma lista
+
 Você pode percorrer os itens da lista usando um for loop:
 
 ```python
@@ -1252,7 +1259,8 @@ for x in list:
   '''
 ```
 
-\*\*\* Usando um loop while
+### Usando um loop while
+
 Você pode percorrer os itens da lista usando um while loop.
 
 Use o len() função para determinar o comprimento da lista, comece em 0 e percorra os itens da lista consultando os índices.
@@ -1267,18 +1275,17 @@ while i < len(list):
   i = i + 1
 ```
 
-\*\*\* Métodos de lista
+### Métodos de lista
 
-| Metodo   | Descrição                                                                          |
-| -------- | ---------------------------------------------------------------------------------- |
-| append() | Adiciona um elemento no final da lista                                             |
-| clear()  | Remove todos os elementos da lista                                                 |
-| copy()   | Retorna uma cópia da lista                                                         |
-| count()  | Retorna o número de elementos com o valor especificado                             |
-| extend() | Adicionar os elementos de uma lista (ou qualquer iterável) ao final da lista atual |
-
-| index() | Retorna o índice do primeiro elemento com o valor especificado |
-| insert() | Adiciona um elemento na posição especificada |
-| remove() | Remove o elemento na posição especificada |
-| reverse()| Inverte a ordem da lista |
-| sort() |Classifica a lista |
+| Metodo    | Descrição                                                                          |
+| --------- | ---------------------------------------------------------------------------------- |
+| append()  | Adiciona um elemento no final da lista                                             |
+| clear()   | Remove todos os elementos da lista                                                 |
+| copy()    | Retorna uma cópia da lista                                                         |
+| count()   | Retorna o número de elementos com o valor especificado                             |
+| extend()  | Adicionar os elementos de uma lista (ou qualquer iterável) ao final da lista atual |
+| index()   | Retorna o índice do primeiro elemento com o valor especificado                     |
+| insert()  | Adiciona um elemento na posição especificada                                       |
+| remove()  | Remove o elemento na posição especificada                                          |
+| reverse() | Inverte a ordem da lista                                                           |
+| sort()    | Classifica a lista                                                                 |
