@@ -1474,3 +1474,180 @@ SAIDA
 'par'
 '''
 ```
+
+## Função em Python
+
+Uma função é um bloco de código que só é executado quando é chamado. Você pode passar dados, conhecidos como parâmetros, para uma função.
+
+Uma função pode retornar dados como resultado.
+
+### Criando uma função
+
+No Python, uma função é definida usando o **def** palavra-chave:
+
+```python
+def my_function():
+  print("Hello from a function")
+```
+
+### Chamando uma função
+
+Para chamar uma função, use o nome da função seguido por parênteses:
+
+```python
+def my_function():
+  print("Hello from a function")
+
+my_function() #chamando a função
+```
+
+### Argumentos
+
+As informações podem ser passadas para funções como argumentos.
+
+Os argumentos são especificados após o nome da função, dentro dos parênteses. Você pode adicionar quantos argumentos quiser, basta separá-los com uma vírgula.
+
+O exemplo a seguir tem uma função com um argumento ( fname ). Quando a função é chamada, passamos um primeiro nome, usado dentro da função para imprimir o nome completo:
+
+```python
+def my_function(fname):
+  print(fname + " Refsnes")
+
+my_function("Emil")
+my_function("Tobias")
+my_function("Linus")
+
+'''
+SAIDA
+"Emil Refsnes"
+"Tobias Refsnes"
+"Linus Refsnes"
+'''
+```
+
+> Argumentos são frequentemente abreviados para args em documentações em Python.
+
+### Parâmetros ou argumentos?
+
+Os termos parâmetro e argumento pode ser usado para a mesma coisa: informações que são passadas para uma função.
+
+> Do ponto de vista de uma função: Um parâmetro é a variável listada dentro dos parênteses na definição da função. Um argumento é o valor que é enviado para a função quando é chamado.
+
+### Número de argumentos
+
+Por padrão, uma função deve ser chamada com o número correto de argumentos. Significando que se sua função espera 2 argumentos, você deve chamar a função com 2 argumentos, não mais e não menos.
+
+```python
+def my_function(fname, lname): # parametro
+  print(fname + " " + lname)
+
+my_function("Emil", "Refsnes") # argumento
+```
+
+> Se você tentar chamar a função com 1 ou 3 argumentos, receberá um erro:
+
+### Argumentos arbitrários, \* args
+
+Se você não souber quantos argumentos serão passados para sua função, adicione um \* antes do nome do parâmetro na definição da função.
+
+Dessa forma, a função receberá um tupla argumentos e pode acessar os itens de acordo:
+
+```python
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus")
+
+'''
+SAIDA
+'The youngest child is Linus'
+'''
+```
+
+> Argumentos Arbitrários são frequentemente abreviados para \*args em documentações em Python.
+
+### Argumentos de palavras-chave
+
+Você também pode enviar argumentos com o nome dachave = valor sintaxe.
+
+Desta forma, a ordem dos argumentos não importa.
+
+```python
+def my_function(child3, child2, child1):
+  print("The youngest child is " + child3)
+
+my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
+```
+
+> A frase _Argumentos de palavras-chave_ são frequentemente abreviados para kwargs em documentações em Python.
+
+### Argumentos arbitrários de palavras-chave, \*\* kwargs
+
+Se você não souber quantos argumentos de palavra-chave serão passados para sua função, adicione dois asteriscos: \*\* antes do nome do parâmetro na definição da função.
+
+Dessa forma, a função receberá um dicionário argumentos e pode acessar os itens de acordo:
+
+```python
+def my_function(**kid):
+  print("His last name is " + kid["lname"])
+
+my_function(fname = "Tobias", lname = "Refsnes")
+```
+
+### Valor padrão do parâmetro
+
+O exemplo a seguir mostra como usar um valor de parâmetro padrão.
+
+Se chamarmos a função sem argumento, ela usa o valor padrão:
+
+```python
+def my_function(country = "Norway"):
+  print("I am from " + country)
+
+my_function("Sweden")
+my_function("India")
+my_function()
+my_function("Brazil")
+
+'''
+SAIDA
+I am from Sweden
+I am from India
+I am from Norway
+I am from Brazil
+'''
+```
+
+### Passando uma lista como argumento
+
+Você pode enviar qualquer tipo de argumento de dados para uma função ( string, número, lista, dicionário etc. ), e vai ser tratado como o mesmo tipo de dados dentro da função.
+
+Por exemplo. se você enviar uma lista como argumento, ela ainda será uma lista quando atinge a função
+
+```python
+def my_function(food):
+  for x in food:
+    print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+my_function(fruits)
+```
+
+### Valores de retorno
+
+Para permitir que uma função retorne um valor, use o return declaração:
+
+```python
+def my_function(x):
+  return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+
+```
+
+#### EXERCICOS
+
+tente fazer o teste10.py, nele tem teorico e prático
