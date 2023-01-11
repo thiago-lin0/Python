@@ -1651,3 +1651,422 @@ print(my_function(9))
 #### EXERCICOS
 
 tente fazer o teste10.py, nele tem teorico e prático
+
+## Tipo de dados Dict _(Dicionário)_
+
+Os dicionários são usados para armazenar valores de dados em pares de chave: valor.
+
+Um dicionário é uma coleção encomendada \*, alterável e não permita duplicatas.
+
+Os dicionários são escritos com colchetes e têm chaves e valores:
+
+```python
+isso_e_um_dicionario = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+print(isso_e_um_dicionario)
+```
+
+### Itens de dicionário
+
+Os itens do dicionário são pedidos, alteráveis e não permitem duplicatas.
+
+Os itens do dicionário são apresentados em pares de **chave: valor** e podem ser referidos por usando o nome da chave.
+
+```python
+isso_e_um_dicionario = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+print(isso_e_um_dicionario["marca"]
+```
+
+### Ordenado ou Não Ordenado?
+
+> A partir da versão 3.7 do Python, os dicionários são ordenado. No Python 3.6 e anterior, os dicionários são não ordenado.
+
+Quando dizemos que os dicionários são pedidos, significa que os itens têm uma ordem definida e essa ordem não será alterada.
+
+Não ordenado significa que os itens não tenha uma ordem definida, você não pode se referir a um item usando um índice.
+
+### Alterável
+
+Os dicionários são alteráveis, o que significa que podemos alterar, adicionar ou remover itens após o dicionário foi criado.
+
+### Duplicatas não permitidas
+
+Os dicionários não podem ter dois itens com a mesma chave:
+
+```python
+isso_e_um_dicionario = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964,
+  "ano": 2020
+}
+print(isso_e_um_dicionario)
+```
+
+### Comprimento do dicionário
+
+Para determinar quantos itens um dicionário possui, use o len() função:
+
+```python
+print(len(isso_e_um_dicionario))
+```
+
+### Itens de dicionário - tipos de dados
+
+Os valores nos itens do dicionário podem ser de qualquer tipo de dados:
+
+```python
+isso_e_um_dicionario = {
+  "marca": "Ford",
+  "electrico": False,
+  "ano": 1964,
+  "cor": ["red", "white", "blue"]
+}
+```
+
+### O dict( ) Construtor
+
+Também é possível usar o dict( ) construtor para fazer um dicionário
+
+```python
+isso_e_um_dicionario = dict(name = "John", age = 36, country = "Norway")
+print(isso_e_um_dicionario)
+```
+
+### Acessando itens do cicionário
+
+Você pode acessar os itens de um dicionário consultando o nome da chave, dentro colchetes:
+
+```python
+dict = {
+  "marcar": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+x = dict["modelo"]
+print(x)
+'''
+SAIDA
+Mustang
+'''
+```
+
+**Há também um método chamado get() que lhe dará o mesmo resultado:**
+
+```python
+x = dict.get("model")
+print(x)
+'''
+SAIDA
+Mustang
+'''
+```
+
+### Obter chaves
+
+O keys() O método retornará uma lista de todas as chaves no dicionário.
+
+```python
+x = dict.keys()
+print(x)
+'''
+SAIDA
+dict_keys(['brand', 'model', 'year'])
+'''
+```
+
+## adicionando chaves
+
+Você pode adicionar uma nova chave e atribuindo um valor para ela passando o nome do dicionario em seguida os colchetes e dentro dele o nome da nova chave e atribuido um valor :
+
+```python
+car = {
+"marca": "Ford",
+"modelo": "Mustang",
+"ano": 1964
+}
+
+x = car.keys()
+
+print(x) #before the change
+
+car["color"] = "white" #add uma nova chave e atribuindo um novo valor
+
+print(x) #after the change
+
+```
+
+### Obter valores
+
+O values() O método retornará uma lista de todos os valores no dicionário.
+
+```python
+x = car.values()
+```
+
+### Obter itens
+
+O items() o método retornará cada item em um dicionário, como tuplas em uma lista.
+
+```python
+x = car.items()
+'''
+SAIDA
+dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+'''
+```
+
+### Verifique se as principais existências
+
+Para determinar se uma chave especificada está presente em um dicionário, use o in palavra-chave:
+
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in car:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+```
+
+### **Alterar items**
+
+### Alterar valores
+
+Você pode alterar o valor de um item específico consultando o nome da chave:
+
+```python
+carro = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+car["year"] = 2018
+```
+
+### Atualizar dicionário
+
+O **update()** método atualizará o dicionário com os itens fornecidos argumento.
+
+O argumento deve ser um dicionário ou um objeto iterável com pares key: value.
+
+```python
+car = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+car.update({"ano": 2020})
+```
+
+### Removendo itens
+
+Existem vários métodos para remover itens de um dicionário:
+
+O pop() método remove o item com o nome da chave especificada:
+
+```python
+car = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+car.pop("modelo")
+print(car)
+```
+
+O **del** palavra-chave remove o item com o especificado Nome chave:
+
+```python
+car = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+del car["modelo"]
+print(car)
+
+'''
+SAIDA
+{'brand': 'Ford', 'year': 1964}
+'''
+```
+
+> O del palavra-chave também pode excluir o dicionário completamente
+
+O **clear()** método esvazia dicionário:
+
+```python
+car = {
+  "marcar": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+car.clear()
+print(car)
+'''
+SAIDA
+{}
+'''
+```
+
+## Loop Através de um Dicionário
+
+Você pode percorrer um dicionário usando um for loop.
+
+Ao percorrer um dicionário, o valor de retorno é o chaves de o dicionário, mas existem métodos para retornar o valores também.
+
+> Imprima todos os nomes de chaves no dicionário, um por um:
+
+```python
+car = {
+  "marcar": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+
+for x in car:
+  print(x)
+
+'''
+SAIDA
+marcar
+modelo
+ano
+'''
+```
+
+> Imprimir tudo valores no dicionário, um por um:
+
+```python
+car = {
+  "marcar": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+
+for x in car.values():
+  print(x)
+
+'''
+SAIDA
+marcar
+modelo
+ano
+'''
+```
+
+> fazer um loop através de ambos chaves e valores, usando o items() método:
+
+```python
+for x, y in car.items():
+  print(x, y)
+
+'''
+SAIDA
+
+brand Ford
+model Mustang
+year 1964
+'''
+```
+
+### Copiar um dicionário
+
+Você não pode copiar um dicionário simplesmente digitando dict2 = dict1, porque: dict2 será apenas um referência para dict1, e alterações feitas em dict1 será automaticamente também feito dict2.
+
+Existem maneiras de fazer uma cópia, uma maneira é usar o dicionário embutido método copy().
+
+Faça uma cópia de um dicionário com o copy() método:
+
+```python
+car = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+mydict = car.copy()
+print(mydict)
+```
+
+> Outra maneira de fazer uma cópia é usar a função interna dict().
+
+```python
+car = {
+  "marca": "Ford",
+  "modelo": "Mustang",
+  "ano": 1964
+}
+mydict = dict(car)
+print(mydict)
+```
+
+### Dicionários aninhados
+
+Um dicionário pode conter dicionários, isso é chamado de aninhado dicionários.
+
+```python
+# Crie um dicionário que contenha três dicionários:
+minha_familia = {
+  "crianca1" : {
+    "nome" : "Emil",
+    "ano_de_nascimento" : 2004
+  },
+  "crianca2" : {
+    "nome" : "Tobias",
+    "ano_de_nascimento" : 2007
+  },
+  "crianca3" : {
+    "nome" : "Linus",
+    "ano_de_nascimento" : 2011
+  }
+}
+```
+
+> Ou, se você quiser adicionar três dicionários em um novo dicionário:
+
+```python
+# Crie três dicionários e crie um dicionário que conterá o outros três dicionários:
+crianca1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+crianca2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+crianca3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+minha_familia = {
+  "crianca1" : crianca1,
+  "crianca2" : crianca2,
+  "crianca3" : crianca3
+}
+```
+
+### Métodos de dicionarios
+
+| Metodo      | Descrição |
+| ----------- | --------- |
+| clear()     |           |
+| copy()      |           |
+| fromkeys()  |           |
+| get()       |           |
+| items()     |           |
+| keys()      |           |
+| pop()       |           |
+| popitem()   |           |
+| setdefaut() |           |
+| update()    |           |
+| values()    |           |
