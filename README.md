@@ -2057,16 +2057,302 @@ minha_familia = {
 
 ### Métodos de dicionarios
 
-| Metodo      | Descrição |
-| ----------- | --------- |
-| clear()     |           |
-| copy()      |           |
-| fromkeys()  |           |
-| get()       |           |
-| items()     |           |
-| keys()      |           |
-| pop()       |           |
-| popitem()   |           |
-| setdefaut() |           |
-| update()    |           |
-| values()    |           |
+| Metodo      | Descrição                                                                                               |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| clear()     | Remove todos os elementos do dicionário                                                                 |
+| copy()      | Retorna uma cópia do dicionário                                                                         |
+| fromkeys()  | Retorna um dicionário com as chaves e valores especificados                                             |
+| get()       | Retorna o valor da chave especificada                                                                   |
+| items()     | Retorna uma lista contendo uma tupla para cada par chave-valor                                          |
+| keys()      | Retorna uma lista contendo as chaves do dicionário                                                      |
+| pop()       | Remove o elemento com a chave especificada                                                              |
+| popitem()   | Remove o último par chave-valor inserido                                                                |
+| setdefaut() | Retorna o valor da chave especificada. Se a chave não existir: insira a chave, com o valor especificado |
+| update()    | Atualiza o dicionário com os pares de valores-chave especificados                                       |
+| values()    | Retorna uma lista de todos os valores no dicionário                                                     |
+
+## Introdução ao tipo set em python (conjuntos)
+
+### Set
+
+Os conjuntos são usados para armazenar vários itens em uma única variável.
+
+O conjunto é um dos **4 tipos de dados internos no Python** usados para armazenar coleções de dados, os outros **3 são Lista, Tuple, e Dicionário**, todos com diferentes qualidades e uso.
+
+Um conjunto é uma coleção que é não ordenado, imutável\*, e não indexado.
+
+> - Nota: Definir itens são imutáveis, mas você pode remover itens e adicione novos itens.
+
+Os conjuntos são escritos com colchetes.
+
+```python
+set = {"apple", "banana", "cherry"}
+print(set)
+```
+
+> Nota: Os conjuntos não são ordenados, portanto você não pode ter certeza de qual peça que os itens aparecerão
+
+### Definir itens
+
+Os itens definidos não são ordenados, imutáveis e não permitem valores duplicados
+
+### Não ordenado
+
+Não ordenado significa que os itens em um conjunto não têm uma ordem definida.
+
+Definir itens pode aparecer em uma ordem diferente toda vez que você os usa, e não pode ser referido por índice ou chave.
+
+### imutáveis
+
+Os itens definidos são imutáveis, o que significa que não podemos alterar os itens após a criação do conjunto.
+
+> Depois que um conjunto é criado, você não pode alterar seus itens, mas pode remover itens e adicione novos itens.
+
+### Duplicatas não permitidas
+
+Os conjuntos não podem ter dois itens com o mesmo valor.
+
+```python
+set = {"apple", "banana", "cherry", "apple"}
+
+print(set)
+
+'''
+SAIDA
+{"banana", "cherry", "apple"}
+'''
+```
+
+### Obter o comprimento de um conjunto
+
+Para determinar quantos itens um conjunto possui, use o len() função.
+
+```python
+set = {"apple", "banana", "cherry"}
+
+print(len(set))
+'''
+SAIDA
+3
+'''
+```
+
+### Definir itens - tipos de dados
+
+Definir itens pode ser de qualquer tipo de dados:
+
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {1, 5, 7, 9, 3}
+set3 = {True, False, False}
+```
+
+> Um conjunto pode conter diferentes tipos de dados:
+
+```python
+set1 = {"abc", 34, True, 40, "male"}
+```
+
+### O set() Construtor
+
+Também é possível usar o set( ) construtor para fazer um conjunto.
+
+```python
+thisset = set(("apple", "banana", "cherry")) # observe os colchetes duplos
+print(thisset)
+```
+
+### Itens de acesso
+
+Você não pode acessar os itens em um conjunto consultando um índice ou uma chave.
+
+Mas você pode percorrer os itens definidos usando um **for** loop ou perguntar se um valor especificado está presente em um conjunto, usando o **in** palavra-chave.
+
+```python
+thisset = {"apple", "banana", "cherry"}
+
+for x in thisset:
+  print(x)
+```
+
+```python
+thisset = {"apple", "banana", "cherry"}
+
+print("banana" in thisset)
+```
+
+> Depois que um conjunto é criado, você não pode alterar seus itens, mas pode adicionar novos itens
+
+### Adicionar itens
+
+> Depois que um conjunto é criado, você não pode alterar seus itens, mas pode adicionar novos itens.
+
+Para adicionar um item a um conjunto, use o add() método
+
+```python
+thisset = {"apple", "banana", "cherry"}
+
+thisset.add("orange")
+
+print(thisset)
+```
+
+### Adicionar Conjuntos
+
+Para adicionar itens de outro conjunto ao conjunto atual, use o update() método.
+
+```python
+fruits = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+
+fruits.update(tropical)
+
+print(fruits)
+```
+
+### Adicionar qualquer iterável
+
+O objeto update() método não tem para ser um conjunto, pode ser qualquer objeto iterável ( tuplas, listas, dicionários etc. ).
+
+```python
+fruits = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+
+thisset.update(mylist)
+print(fruits)
+```
+
+### Remover item
+
+Para remover um item em um conjunto, use o remove(), ou o discard() método.
+
+```python
+fruits = {"apple", "banana", "cherry"}
+
+fruits.remove("banana")
+
+print(fruits)
+```
+
+> Nota: Se o item a ser removido não existir, remove() levantará um erro.
+
+```python
+thisset = {"apple", "banana", "cherry"}
+
+thisset.discard("banana")
+
+print(thisset)
+```
+
+> Nota: Se o item a ser removido não existir, discard() NÃO vai levantar erro.
+
+Você também pode usar o pop() método para remover um item, mas esse método removerá o último item. Lembre-se de que define não são ordenados, portanto você não saberá qual item foi removido.
+
+O valor de retorno do pop() método é o item removido.
+
+```python
+thisset = {"apple", "banana", "cherry"}
+x = thisset.pop()
+print(x)
+print(thisset)
+```
+
+> O clear() método esvazia o conjunto:
+
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.clear()
+print(thisset)
+```
+
+> O del palavra-chave excluirá o conjunto completamente:
+
+```python
+thisset = {"apple", "banana", "cherry"}
+del thisset
+print(thisset)
+```
+
+### Itens de loop
+
+Você pode percorrer os itens definidos usando um for loop:
+
+> Faça um loop através do conjunto e imprima os valores:
+
+```python
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+  print(x)
+```
+
+### Juntando dois conjuntos
+
+Existem várias maneiras de ingressar em dois ou mais conjuntos no Python.
+
+Você pode usar o union() método que retorna um novo conjunto contendo todos os itens dos dois conjuntos, ou o update() método que insere todos os itens de um conjunto em outro:
+
+```python
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+
+set3 = set1.union(set2)
+print(set3)
+```
+
+```python
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+
+set1.update(set2)
+print(set1)
+```
+
+> Nota: Ambos union() e update() excluirá quaisquer itens duplicados.
+
+### Mantenha APENAS os Duplicados
+
+O intersection_update() O método manterá apenas os itens presentes nos dois conjuntos.
+
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.intersection_update(y)
+
+print(x)
+```
+
+> O intersection() método retornará um novo set, que contém apenas os itens presentes nos dois conjuntos.
+
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.intersection(y)
+
+print(z)
+```
+
+### Mantenha tudo, mas NÃO os duplicados
+
+O symmetric_difference_update() método vai manter apenas os elementos que NÃO estão presentes nos dois conjuntos.
+
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y)
+
+print(x)
+```
+
+> O symmetric_difference() método retornará um novo conjunto, que contém apenas os elementos que NÃO estão presentes nos dois conjuntos.
+
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.symmetric_difference(y)
+
+print(z)
+```
