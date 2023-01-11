@@ -244,6 +244,7 @@ Primeiro, vamos ver como converter inteiros. Para converter o inteiro 12 em um v
        '12'
 ```
 
+
 ### Convertendo strings em números
 
 As strings podem ser convertidas em números usando os métodos int() e float(). Se sua string não tiver casas decimais, você provavelmente vai querer convertê-la em um número inteiro, usando o método int().
