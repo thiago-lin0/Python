@@ -2357,3 +2357,8 @@ z = x.symmetric_difference(y)
 
 print(z)
 ```
+
+### Função lambda
+
+A função lambda é uma função como qualquer outra em Python. Porém, são funções anônimas que contém apenas uma linha. Ou seja, tudo deve ser contido dentro de uma única linha
+  
